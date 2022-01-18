@@ -1,1 +1,1 @@
-# chronology
+# George Eliot Chronology
