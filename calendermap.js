@@ -1,14 +1,14 @@
 var width = 900,
     height = 105,
     cellSize = 12; // cell size
-    week_days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
-    month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    let week_days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+    let month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 	
 var day = d3.time.format("%w"),
     week = d3.time.format("%U"),
     percent = d3.format(".1%"),
-	format = d3.time.format("%Y-%m-%d");
-	parseDate = d3.time.format("%Y-%m-%d").parse;
+    format = d3.time.format("%Y-%m-%d");
+    var parseDate = d3.time.format("%Y-%m-%d").parse;
 		
 var color = d3.scale.linear().range(["white", '#002b53'])
     .domain([0, 1])
@@ -88,8 +88,7 @@ d3.csv("Events_date.csv", function(error, csv) {
   rect.filter(function(d) { return d in data; })
       .attr("fill", "#B8860B")
 	  .attr("data-title", function(d) { 
-      // console.log(d);
-      // console.log(data[d]);
+
 
 
       return "Event : "+ data[d]});   
