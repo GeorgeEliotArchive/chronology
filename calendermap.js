@@ -90,8 +90,8 @@ d3.csv("Events_date.csv", function(error, csv) {
 	  .attr("data-title", function(d) { 
 
 
-
-      return "Event : "+ data[d]});   
+      // console.log(data[d])
+      return d + ": " + data[d]});   
 	$("rect").tooltip({container: 'body', html: true, placement:'top'}); 
 });
 
