@@ -68,7 +68,7 @@ svg.selectAll(".month")
     .attr("id", function(d,i){ return month[i] })
     .attr("d", monthPath);
 
-d3.csv("Events_date.csv", function(error, csv) {
+d3.csv("Events_date_weekday.csv", function(error, csv) {
 
   csv.forEach(function(d) {
     d.Event = d.Event;
@@ -80,7 +80,10 @@ d3.csv("Events_date.csv", function(error, csv) {
  
   var data = d3.nest()
     .key(function(d) { return d.Date; })
-    .rollup(function(d) {  return  d[0].Event })
+    .rollup(function(d) {  return  {
+      weekday: d[0].Weekday,
+      event:d[0].Event,
+     }})
     .map(csv);
 
   // console.log(data)
@@ -90,8 +93,8 @@ d3.csv("Events_date.csv", function(error, csv) {
 	  .attr("data-title", function(d) { 
 
 
-      // console.log(data[d])
-      return d + ": " + data[d]});   
+      console.log(data)
+      return d + " (" + data[d].weekday + "): " + data[d].event});   
 	$("rect").tooltip({container: 'body', html: true, placement:'top'}); 
 });
 
