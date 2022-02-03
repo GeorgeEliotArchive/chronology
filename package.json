@@ -1,0 +1,24 @@
+{
+  "name": "chronology",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bootstrap.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tree": "lite-server -c config/bs-config-tree.json",
+    "calendar": "lite-server -c config/bs-config-calendar.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgeEliotArchive/chronology.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/GeorgeEliotArchive/chronology/issues"
+  },
+  "homepage": "https://github.com/GeorgeEliotArchive/chronology#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
