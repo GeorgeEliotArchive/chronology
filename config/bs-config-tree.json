@@ -1,0 +1,5 @@
+{
+    "port": 8000,
+    "files": ["./chronology-tree/**/*.{html,htm,css,js}"],
+    "server": { "baseDir": "./chronology-tree" }
+  }
