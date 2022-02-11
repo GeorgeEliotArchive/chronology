@@ -70,10 +70,10 @@ svg.selectAll(".month")
 
 d3.csv("Events_date_weekday.csv", function(error, csv) {
 
-  csv.forEach(function(d) {
+  csv.forEach(function(d) { //d has Date,Year,Month,Day,Weekday,Event
     d.Event = d.Event;
     d.Date = d.Date;
-    // console.log(d.Date)
+    //alert(d.Date)
   });
 
  var Event_Max = d3.max(csv, function(d) { return d.Event; });
@@ -86,14 +86,14 @@ d3.csv("Events_date_weekday.csv", function(error, csv) {
      }})
     .map(csv);
 
-  // console.log(data)
+   //console.log(data)
 	
   rect.filter(function(d) { return d in data; })
       .attr("fill", "#B8860B")
 	  .attr("data-title", function(d) { 
 
 
-      console.log(data)
+      //alert(data[d].event)
       return d + " (" + data[d].weekday + "): " + data[d].event});   
 	$("rect").tooltip({container: 'body', html: true, placement:'top'}); 
 });
@@ -115,4 +115,41 @@ function monthPath(t0) {
       + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
       + "H" + (w1 + 1) * cellSize + "V" + 0
       + "H" + (w0 + 1) * cellSize + "Z";
+}
+
+function getInputValue(){
+  // Selecting the input element and get its value 
+  var inputVal = document.getElementById("myInput").value;
+  d3.csv("Events_date_weekday.csv", function(error, csv) {
+
+    csv.forEach(function(d) { //d has Date,Year,Month,Day,Weekday,Event
+      d.Event = d.Event;
+      d.Date = d.Date;
+     // alert(d.Date)
+    });
+  
+   var Event_Max = d3.max(csv, function(d) { return d.Event; });
+   
+    var data = d3.nest()
+      .key(function(d) { return d.Date; })
+      .rollup(function(d) {  return  {
+        weekday: d[0].Weekday,
+        event:d[0].Event,
+       }})
+      .map(csv);
+  
+     //console.log(data)
+    
+    
+    rect.filter(function(d) { return d in data; })
+        .attr("fill", "#0bb814" )
+      .attr("data-title", function(d) { 
+  
+  
+        //alert(data[d].event)
+        return d + " (" + data[d].weekday + "): " + data[d].event});   
+    $("rect").tooltip({container: 'body', html: true, placement:'top'}); 
+  });
+  // Displaying the value
+ // alert(svg);
 }
