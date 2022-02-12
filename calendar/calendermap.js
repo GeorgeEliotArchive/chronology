@@ -125,7 +125,13 @@ function getInputValue(){
     csv.forEach(function(d) { //d has Date,Year,Month,Day,Weekday,Event
       d.Event = d.Event;
       d.Date = d.Date;
-     // alert(d.Date)
+      if(d.Event.toLowerCase().includes(inputVal.toLowerCase())){
+        d.Color = "#623216";
+      }
+      else{
+        d.Color = "#B4B782";
+      }
+     // alert(d.Color)
     });
   
    var Event_Max = d3.max(csv, function(d) { return d.Event; });
@@ -135,21 +141,33 @@ function getInputValue(){
       .rollup(function(d) {  return  {
         weekday: d[0].Weekday,
         event:d[0].Event,
+        col:d[0].Color,
        }})
       .map(csv);
   
      //console.log(data)
     
-    
-    rect.filter(function(d) { return d in data; })
-        .attr("fill", "#0bb814" )
-      .attr("data-title", function(d) { 
+//    for(d in data) {
+//      alert(data[d].event)
+ //     if(data[d].event.includes(inputVal)) {
+ //       rect.filter(d).attr("fill", "#0bb814")
+  //    }
+   // }
+  /* for(d in data){
+     alert(data[d].col);
+     rect.filter(d).attr("fill", "#0bb814");
+     } */
+
+   rect.filter(function(d) { return d in data; })
+        .attr("fill", function(d) { return data[d].col; } );
+        
+   /*   .attr("data-title", function(d) { 
   
   
-        //alert(data[d].event)
+        alert(data[d].event)
         return d + " (" + data[d].weekday + "): " + data[d].event});   
-    $("rect").tooltip({container: 'body', html: true, placement:'top'}); 
-  });
+    $("rect").tooltip({container: 'body', html: true, placement:'top'}); */
+  }); 
   // Displaying the value
  // alert(svg);
 }
