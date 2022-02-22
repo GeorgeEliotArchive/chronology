@@ -117,9 +117,10 @@ function monthPath(t0) {
       + "H" + (w0 + 1) * cellSize + "Z";
 }
 
-function getInputValue(){
+function searchCalendar(){ //
   // Selecting the input element and get its value 
   var inputVal = document.getElementById("myInput").value;
+  //changes color of square in calendar
   d3.csv("Events_date_weekday.csv", function(error, csv) {
     csv.forEach(function(d) { //d has Date,Year,Month,Day,Weekday,Event
       if(d.Event.toLowerCase().includes(inputVal.toLowerCase())){
