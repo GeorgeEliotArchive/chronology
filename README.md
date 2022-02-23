@@ -1,5 +1,5 @@
 # George Eliot Chronology
-
+# Version 1.1
 ## Description
 
 The George Eliot Chronology is a group of visualizations meant to help in the study of George Eliot.
@@ -19,6 +19,7 @@ Otherwise,
 Use the following commands to run the two visualizations locally.
 
 `npm run calendar`: run the calendar visualization on `localhost:8000`
+Use the search bar to search for key terms in events.
 
 `npm run tree`: run the chronology tree on `localhost:8001`
 
