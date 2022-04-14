@@ -16,3 +16,5 @@ node_modules
 # Built Visual Studio Code Extensions
 *.vsix
 
+# Data generated from Omeka
+*.csv
