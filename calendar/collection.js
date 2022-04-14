@@ -1,6 +1,5 @@
 
 const axios = require('axios');
-const React = require("react");
 const fs = require('fs');
 
 const apiurl = "https://georgeeliotarchive.org/api/items?collection=45";
