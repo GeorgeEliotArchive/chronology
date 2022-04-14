@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tree": "lite-server -c config/bs-config-tree.json",
-    "calendar": "lite-server -c config/bs-config-calendar.json"
+    "calendar": "lite-server -c config/bs-config-calendar.json",
+    "getData": "node ./collection.js"
   },
   "repository": {
     "type": "git",

@@ -18,6 +18,8 @@ Otherwise,
 
 Use the following commands to run the two visualizations locally.
 
+`npm run getData`: Generate csv files from the Omeka collection. Must be run before the calendar or tree.
+
 `npm run calendar`: run the calendar visualization on `localhost:8000`
 
 `npm run tree`: run the chronology tree on `localhost:8001`
