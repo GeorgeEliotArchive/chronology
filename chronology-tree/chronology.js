@@ -19,7 +19,7 @@ decades.children.push({ "name": "1851-1860", startYear: 1851, endYear: 1860, chi
 decades.children.push({ "name": "1861-1870", startYear: 1861, endYear: 1870, children: [] })
 decades.children.push({ "name": "1871-1880", startYear: 1871, endYear: 1880, children: [] })
 
-var parseData = d3.csv('GeorgeEliotChronologyEditedFinal.csv', function (data) {
+var parseData = d3.csv('data.csv', function (data) {
   if (data.Month) { //skip months with no data (year dividers on excel sheet)
     //check if current year is in the year array
     var year = years.find(y => y.name == data.Year);
