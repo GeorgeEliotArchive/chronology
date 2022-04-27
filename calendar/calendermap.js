@@ -122,7 +122,7 @@ function searchCalendar(){ //
   var inputVal = document.getElementById("myInput").value;
   var myArray = inputVal.split(" ");
   //changes color of square in calendar
-  d3.csv("Events_date_weekday.csv", function(error, csv) {
+  d3.csv("data.csv", function(error, csv) {
     csv.forEach(function(d) { //d has Date,Year,Month,Day,Weekday,Event
       d.Color = "#623216";
       let words = inputVal.split(" ");
