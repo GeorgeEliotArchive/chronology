@@ -29,12 +29,12 @@ axios
     for(var j = 1; j < 5; j++){
       data.push(newCollection[i].element_texts[j].text);    
     }
-    data.push("\"" + newCollection[i].element_texts[5].text.replace('"', '') + '\"\n' + newCollection[i-1].element_texts[0].text);
+    data.push("\"" + newCollection[i].element_texts[5].text.replaceAll('"', '') + '\"\n' + newCollection[i-1].element_texts[0].text);
   }
   for(var j = 1; j < 5; j++){
     data.push(newCollection[i].element_texts[j].text);      
   }
-  data.push("\"" + newCollection[i].element_texts[5].text.replace('"', '') + '\"\n');
+  data.push("\"" + newCollection[i].element_texts[5].text.replaceAll('"', '') + '\"\n');
 
   fs.writeFile("./calendar/data.csv", "Date,Year,Month,Day,Weekday,Event\n" + data.toString(), function(err) {
     if(err) {
