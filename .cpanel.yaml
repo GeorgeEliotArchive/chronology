@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/georgeel/georgeeliotarchive.org/chronology
+    - export DEPLOYPATH=/home/georgeel/georgeeliotarchive.org/chronology-test-dir
     - npm install
     - /bin/cp -R calendar $DEPLOYPATH
     - /bin/cp -R chronology-tree $DEPLOYPATH
