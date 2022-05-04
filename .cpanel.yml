@@ -1,9 +1,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/georgeel/georgeeliotarchive.org/chronology-test-dir
-    - npm install
+    - /home/georgeel/.nvm/versions/node/v12.22.12/bin/npm install
+    - /home/georgeel/.nvm/versions/node/v12.22.12/bin/node collection.js
     - /bin/cp -R calendar $DEPLOYPATH
     - /bin/cp -R chronology-tree $DEPLOYPATH
     - /bin/cp -R node_modules $DEPLOYPATH
     - /bin/cp collection.js $DEPLOYPATH
-    - cd $DEPLOYPATH && node ./collection.js
