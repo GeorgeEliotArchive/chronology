@@ -4,6 +4,8 @@ deployment:
     - source ~/.nvm/nvm.sh # add nvm command
     - nvm -v
     - nvm list
+    - nvm install v15
+    - nvm use v15
     - npm install
     - node collection.js
     - /bin/cp -R calendar $DEPLOYPATH
