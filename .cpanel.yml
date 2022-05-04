@@ -6,9 +6,9 @@ deployment:
     - nvm list
     - nvm install v15
     - nvm use v15
-    - npm install
+    - npm ci
     - node collection.js
     - /bin/cp -R calendar $DEPLOYPATH
     - /bin/cp -R chronology-tree $DEPLOYPATH
     - /bin/cp -R node_modules $DEPLOYPATH
-    - /bin/cp collection.js $DEPLOYPATH
+    - /bin/cp collection.js $DEPLOYPATadd nvm source during deploymentH
