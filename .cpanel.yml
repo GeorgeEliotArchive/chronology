@@ -1,10 +1,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/georgeel/georgeeliotarchive.org/chronology-test-dir
-    # The cpanel deployment runs as root, which npm prevents from running install,
-    # so we execute npm install as georgeel instead.
-    - su georgeel bash -c "npm install"
-    - su georgeel bash -c "node collection.js"
+    - whoami
     - /bin/cp -R calendar $DEPLOYPATH
     - /bin/cp -R chronology-tree $DEPLOYPATH
     - /bin/cp -R node_modules $DEPLOYPATH
