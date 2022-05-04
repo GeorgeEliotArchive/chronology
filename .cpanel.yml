@@ -3,6 +3,7 @@ deployment:
     - export DEPLOYPATH=/home/georgeel/georgeeliotarchive.org/chronology-test-dir
     # The cpanel deployment runs as root, which npm prevents from running install
     # so we execute npm install as georgeel
+    - source ~/.nvm/nvm.sh
     - nvm -v
     - nvm list
 #    - /bin/cp -R calendar $DEPLOYPATH
