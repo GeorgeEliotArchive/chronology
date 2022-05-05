@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/georgeel/georgeeliotarchive.org/chronology-test-dir
+    - export DEPLOYPATH=/home/georgeel/georgeeliotarchive.org/chronology
     - source ~/.nvm/nvm.sh # add nvm command
     - nvm -v
     - nvm list
