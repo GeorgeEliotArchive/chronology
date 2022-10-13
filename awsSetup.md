@@ -5,6 +5,11 @@
 2. [Getting Started with AWS CDK](https://aws.amazon.com/getting-started/guides/setup-cdk/?intClick=gsdir)
 3. [Getting Started with Elastic Beanstalk](https://aws.amazon.com/getting-started/guides/deploy-webapp-elb/?intClick=gsdir)
 
+#### Additional Resources
+The tutorials are unfortunately out of date with some of AWS' recent versions. Below is some documentation that displays current server resource capabilities.
+
+- [Solution Stack Names](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html): Shows platforms available for creating environments.
+
 #### FAQ
 - ```this``` is throwing a compilation error. How do I fix this?
 
