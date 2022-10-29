@@ -16,22 +16,22 @@ The tutorials are unfortunately out of date with some of AWS' recent versions. B
 - During the process, I figured I could just take the main javascript file, rename it to app.js (and adjust accordingly) to produce the files AWS wanted. Recall that these files are "app.js", "index.html", your json packages, and a "server.js" (optional). app.js serves as a main function, crafting the parts of your application together while index.html builds together and styles the necessary parts of your presentation. To do this, you MUST create a new file called "app.js" and ensure that it is driving the execution similar to how it shows you in the tutorials above. I will insert some example code from when I was testing with calendarMap.
 
 ```javascript
-var express = require('express');
-var path = require('path');
-var app = express();
-var fs = require('fs');
-var port = 8080;
+var express = require('express'); //import for server library
+var path = require('path'); //built in library for node to help with PATH
+var app = express(); 
+var fs = require('fs'); //filestream, also built in
+var port = 8080; //as far as I'm aware, this number can be mostly anything
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"))); //in a folder "public", include all .js, .html, .css files
 
 app.get('/', function(req, res) {
-    html = fs.readFileSync('index.html')
-    res.write(html);
-    res.end();
+    html = fs.readFileSync('index.html') //read index page
+    res.write(html); // create index page
+    res.end(); //end response
 });
 
 app.listen(port, function() {
-    console.log('Server running at http://127.0.0.1:%s', port);
+    console.log('Server running at http://127.0.0.1:%s', port); //just included this for heck of it
 });
 ```
 
