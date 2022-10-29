@@ -1,4 +1,4 @@
-## Documentation for AWS Setup - 10/13/22
+## Documentation for AWS Setup - 10/29/22
 
 #### Tutorials (in order of completion)
 1. [Setup Your AWS Environment](https://aws.amazon.com/getting-started/guides/setup-environment/)
