@@ -15,7 +15,7 @@ The tutorials are unfortunately out of date with some of AWS' recent versions. B
 
 - During the process, I figured I could just take the main javascript file, rename it to app.js (and adjust accordingly) to produce the files AWS wanted. Recall that these files are "app.js", "index.html", your json packages, and a "server.js" (optional). app.js serves as a main function, crafting the parts of your application together while index.html builds together and styles the necessary parts of your presentation. To do this, you MUST create a new file called "app.js" and ensure that it is driving the execution similar to how it shows you in the tutorials above. I will insert some example code from when I was testing with calendarMap.
 
-'''javascript
+```javascript
 var express = require('express');
 var path = require('path');
 var app = express();
@@ -33,7 +33,7 @@ app.get('/', function(req, res) {
 app.listen(port, function() {
     console.log('Server running at http://127.0.0.1:%s', port);
 });
-'''
+```
 
 #### FAQ
 - ```this``` is throwing a compilation error. How do I fix this?
