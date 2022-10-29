@@ -53,3 +53,7 @@ app.listen(port, function() {
 - The [server had issues starting Node.js](https://stackoverflow.com/questions/20634122/failed-to-find-package-json-node-js-may-have-issues-starting-verify-package-js). How do I fix this?
   
   Earlier in the 3rd tutorial, they asked you to zip the app files together. If you're not using a Linux terminal, like bash, then the zip command doesn't work. Perhaps you zipped manually in that case. If you zipped the PARENT DIRECTORY, it will throw an error. You have to click into the directory the app is located and then ctrl+click all the files inside and zip those.
+
+- Environment is degraded. How do I fix this?
+
+  Unfortunately, the answer to this question isn't clear cut. You'll need to rely on the environment logs and your understanding (or Google/Stackoverflow) to slowly breakdown any issues. My best advice is to read the note I made regarding the files required above. It'll be a lot more straightfoward in debugging.
