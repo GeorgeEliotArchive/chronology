@@ -56,4 +56,4 @@ app.listen(port, function() {
 
 - Environment is degraded. How do I fix this?
 
-  Unfortunately, the answer to this question isn't clear cut. You'll need to rely on the environment logs and your understanding (or Google/Stackoverflow) to slowly breakdown any issues. My best advice is to read the note I made regarding the files required above. It'll be a lot more straightfoward in debugging.
+  Unfortunately, the answer to this question isn't clear cut. You'll need to rely on the environment logs and your understanding (or Google/Stack Overflow) to slowly break down any issues. My best advice is to read the note I made regarding the files required above. It'll be a lot more straightfoward in debugging.
