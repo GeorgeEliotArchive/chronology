@@ -2,7 +2,7 @@
 
 ## Description
 
-The George Eliot Chronology is a group of visualizations meant to help in the study of George Eliot.
+The George Eliot Chronology is a subproject of the George Eliot Archive. The group of visualizations collects dated information from primary source documents and displays more than 3,000 dates meant to support biographical research on Victorian author, George Eliot. A more detailed introduction to the project and the home page of the project [will be found here: ](https://georgeeliotarchive.org/chronology/)
 
 ## Setup
 
